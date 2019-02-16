@@ -1,0 +1,28 @@
+{
+  "name": "animalia",
+  "version": "0.5.0",
+  "description": "Online animal adoption and rescue system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/perfectionaq/Animalia.git"
+  },
+  "author": "Perfection.A.Q",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/perfectionaq/Animalia/issues"
+  },
+  "homepage": "https://github.com/perfectionaq/Animalia#readme",
+  "dependencies": {
+    "config": "^3.0.1",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.13",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
+    "react-redux": "^6.0.0",
+    "redux": "^4.0.1"
+  }
+}
