@@ -20,3 +20,5 @@ const UserSchema = new mongoose.Schema({
     maxlength: 1024,
   },
 });
+
+module.exports = UserSchema;
