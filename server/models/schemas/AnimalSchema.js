@@ -36,6 +36,7 @@ const AnimalSchema = new mongoose.Schema({
     required: true,
     min: 0,
     max: 3,
+    default: 0
   },
   /* TODO: make a custom type 
      * 0 adopted
@@ -46,6 +47,7 @@ const AnimalSchema = new mongoose.Schema({
     required: true,
     min: 0,
     max: 1,
+    default: 0
   },
 });
 
