@@ -17,8 +17,10 @@
   },
   "homepage": "https://github.com/perfectionaq/Animalia#readme",
   "dependencies": {
+    "bcrypt": "^3.0.4",
     "config": "^3.0.1",
     "express": "^4.16.4",
+    "jsonwebtoken": "^8.4.0",
     "mongoose": "^5.4.13",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",

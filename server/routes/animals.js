@@ -15,7 +15,8 @@ router.get('/', async (request, response) => {
 });
 
 router.get('/:id', async (request, response) => {
-
+  const animal = await Animal.findById(request.params.id);
+  return animal ? response.send(animal) : response.status(404).send(animal);
 });
 
 router.post('/', async (request, response) => {
@@ -29,7 +30,7 @@ router.post('/', async (request, response) => {
   });
   
   const result = await animal.save();
-  
+
   result 
     ? response.send(result)
     : response.status(400).send('Could not add animal');
