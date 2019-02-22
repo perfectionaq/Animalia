@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const jwt = require('jsonwebtoken');
 
 const UserSchema = new mongoose.Schema({
   name: {
@@ -21,5 +22,10 @@ const UserSchema = new mongoose.Schema({
     maxlength : 1024,
   },
 });
+
+UserSchema.methods.generateToken = () => {
+  const token = jwt.sign({_id: this._id, name: this.name, mobile: this.mobile}, 'pvtKey');
+  return token;
+}
 
 module.exports = UserSchema;

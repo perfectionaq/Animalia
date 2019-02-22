@@ -24,9 +24,12 @@ router.post('/', async (request, response) => {
   });
   if(user) {
     user = await user.save();
-    return user ? response.send(user) : response.status(500).send('Internal Error');
+    const token = user.generateToken();
+    return user && token 
+      ? response.send(token) 
+      : response.status(500).send('Internal Error');
   } else {
-    response.status(400).send('Bad request');
+    return response.status(400).send('Bad request');
   }
 });
 

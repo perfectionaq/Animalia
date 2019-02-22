@@ -49,6 +49,13 @@ const AnimalSchema = new mongoose.Schema({
     max     : 1,
     default : 0
   },
+  //array of animal images links
+  images: {
+    type    : [String],
+    required: false,
+    min     : 0,
+    max     : 10,
+  },
 });
 
 module.exports = AnimalSchema;
