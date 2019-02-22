@@ -14,4 +14,14 @@ router.get('/', async (request, response) => {
   }
 });
 
+router.post('/', (request, response) => {
+  const user = new User({
+    name: request.body.name,
+    mobile: request.body.mobile,
+    password: request.body.password,
+  });
+
+    
+});
+
 module.exports = router;

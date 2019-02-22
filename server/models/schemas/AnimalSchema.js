@@ -2,28 +2,28 @@ const mongoose = require('mongoose');
 
 const AnimalSchema = new mongoose.Schema({
   name: {
-    type: String,
-    required: true,
-    trim: true,
-    minlength: 2,
-    maxlength: 256,
+    type      : String,
+    required  : true,
+    trim      : true,
+    minlength : 2,
+    maxlength : 256,
   },
   type: {
-    type: String,
-    required: true,
-    minlength: 2,
-    maxlength: 256,
+    type      : String,
+    required  : true,
+    minlength : 2,
+    maxlength : 256,
   },
   //Age is currently in years
   age: {
-    type: Number,
-    required: false,
-    min: 0,
-    max: 1000,
+    type      : Number,
+    required  : false,
+    min       : 0,
+    max       : 1000,
   },
   /* TODO: make a custom type */
   breed: {
-    type: String,
+    type    : String,
     required: false,
   },
   /* TODO: make a custom type 
@@ -32,22 +32,22 @@ const AnimalSchema = new mongoose.Schema({
      * 2 fostered
   */
   animalStatus: {
-    type: Number,
+    type    : Number,
     required: true,
-    min: 0,
-    max: 3,
-    default: 0
+    min     : 0,
+    max     : 3,
+    default : 0
   },
   /* TODO: make a custom type 
      * 0 adopted
      * 1 available for adoption
   */
   status: {
-    type: Number,
+    type    : Number,
     required: true,
-    min: 0,
-    max: 1,
-    default: 0
+    min     : 0,
+    max     : 1,
+    default : 0
   },
 });
 
