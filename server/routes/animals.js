@@ -33,7 +33,7 @@ router.post('/', async (request, response) => {
   
   const result = await animal.save();
 
-  result 
+  return result
     ? response.send(result)
     : response.status(400).send('Could not add animal');
 });
