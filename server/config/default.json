@@ -1,3 +1,4 @@
 {
-  "db": "mongodb://localhost/Animalia_production"
+  "db": "mongodb://localhost/Animalia_production",
+  "private_key": "animalia_private_key"
 }

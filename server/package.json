@@ -2,8 +2,10 @@
   "name": "animalia",
   "version": "0.5.0",
   "description": "Online animal adoption and rescue system",
-  "main": "index.js",
-  "scripts": {},
+  "main": "../index.js",
+  "scripts": {
+    "start": "node app"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/perfectionaq/Animalia.git"

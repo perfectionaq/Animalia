@@ -49,7 +49,7 @@ const AnimalSchema = new mongoose.Schema({
     max     : 1,
     default : 0
   },
-  //array of animal images links
+  //array of links of the animal's images
   images: {
     type    : [String],
     required: false,
