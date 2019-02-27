@@ -25,7 +25,7 @@ const UserSchema = new mongoose.Schema({
     maxlength : 1024,
   },
 });
-
+/* TODO: move private key to an environment variable */
 UserSchema.methods.generateToken = () => {
   const token = jwt.sign({_id: this._id, name: this.name, mobile: this.mobile}, privateKey);
   return token;

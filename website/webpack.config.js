@@ -7,9 +7,17 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: ['babel-loader']
-      }
-    ]
+        loader: 'babel-loader',
+        // use: ['babel-loader'],
+        options: {
+          plugins: [
+            'transform-class-properties',
+            'transform-object-rest-spread',
+            '@babel/plugin-transform-runtime'
+          ]
+        },
+      },    
+    ],
   },
   resolve: {
     extensions: ['*', '.js', '.jsx']
