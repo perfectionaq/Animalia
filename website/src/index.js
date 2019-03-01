@@ -1,11 +1,30 @@
 import React from 'react';
 import ReactDOM  from 'react-dom';
+import { Route, Switch } from 'react-router';
+import { Provider } from 'react-redux';
 import App from './components/App.jsx';
+import { ErrorBoundary } from './components/utilComponents/ErrorBoundary.jsx';
+import { createBrowserHistory } from 'history'
+import { ConnectedRouter } from 'connected-react-router'
 
-const title = 'Animalia';
-const api = 'http://localhost:8080/api/animals/';
+import { store } from './reducers/store';
+
+const history = createBrowserHistory();
+
+
+const MainComponent = () => (
+  <ErrorBoundary>
+    <Provider store={store(history)}>
+      <ConnectedRouter history={history}>
+        <Switch>
+          <Route exact path='/' render={() => <App/>} />
+        </Switch>
+      </ConnectedRouter>
+    </Provider>
+  </ErrorBoundary>
+);
 
 ReactDOM.render(
-  <App />,
+  <MainComponent />,
   document.getElementById('app')
 );

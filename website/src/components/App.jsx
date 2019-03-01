@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
 const api = 'http://localhost:8080/api/animals/';
 
 class App extends Component {
@@ -9,6 +11,7 @@ class App extends Component {
       .then(result => animals = result);
     return animals;
   }
+
   constructor(props) {
     super(props);
 
@@ -21,14 +24,17 @@ class App extends Component {
     this.setState({animals});
   }
   render() {
+    console.log(this.props);
     return (
       <div>
         <ul>
-          {this.state.animals.map(animal => <li>{animal.name}</li>)}
+          {this.state.animals.map((animal, index) => 
+            <li key={`${index}${animal.name}`}>{animal.name}</li>)
+          }
         </ul>
       </div>
     )
   }
 }
 
-export default App;
+export default connect(null, null)(App);
